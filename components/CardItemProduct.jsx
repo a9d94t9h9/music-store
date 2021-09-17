@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Dimensions, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 /* import { Products } from '../data/products';
 import { Categories } from '../data/data'; */
@@ -10,7 +10,10 @@ const CardProduct = ({item}) => {
     return (
         <TouchableOpacity style={styles.container}>
             <MaterialCommunityIcons name="piano" size={130} color="black" />
-            <Text style={styles.textProduct}>{item.name}</Text>
+           <View style={styles.textContainer}>
+           <Text style={styles.textProduct}>{item.name}</Text>
+           <Text style={styles.textPrice}>{item.price}</Text>
+           </View>
         </TouchableOpacity>
     );
 };
@@ -20,7 +23,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        width: Dimensions.get('window').width / 2,
+        /* width: Dimensions.get('window').width / 2, */
+        width: '95%',
         /* height: '130%', */
         maxWidth: '98%',
         minWidth: 300,
@@ -35,7 +39,18 @@ const styles = StyleSheet.create({
     },
     textProduct: {
         color: 'black',
-    }
+        fontWeight: '600',
+        maxWidth: '80%',
+    },
+    textPrice : {
+        color: 'black',
+        fontWeight: '800'
+    },
+    textContainer: {
+        textAlign: 'center',
+        padding: 5,
+        alignItems: 'center'
+    } 
 });
 
 export default CardProduct;
