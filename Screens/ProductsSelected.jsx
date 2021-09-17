@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions, FlatList } from 'react-native';
 import CardProduct from '../components/CardItemProduct';
-import { Products } from '../data/products';
-import { useSelector } from 'react-redux';
+/* import { Products } from '../data/products'; */
+import { useSelector, useDispatch } from 'react-redux';
+import { filterProducts } from '../store/actions/products.action';
 
 const Product = () => {
-    const categoryId = useSelector(state => state.categories.selectedID);
+    const dispatch = useDispatch();
+    const categoryID = useSelector(state => state.categories.selectedID);
     /* const selected = Products.filter(index => index.category === route.params.categoryId); */
-    const selected = Products.filter(index => index.category === categoryId);
+    /* const selected = Products.filter(index => index.category === categoryId); */
+    const products = useSelector(state => state.products.filteredProducts)
+    useEffect(() =>{
+        dispatch(filterProducts(categoryID));
+    }, [categoryID]);
     const render = data => {
         return(
             <CardProduct item={data.item} />
@@ -16,7 +22,7 @@ const Product = () => {
     return (
         <View style={styles.container}>
             <FlatList
-                data={selected}
+                data={products}
                 renderItem={render}
                 keyExtractor={(item) => item.id}
             />

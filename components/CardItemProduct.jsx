@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 /* import { Products } from '../data/products';
 import { Categories } from '../data/data'; */
 
-const CardProduct = (item) => {
+const CardProduct = ({item}) => {
     /* const selectedCategory = Categories.a(); */
     
     return (
