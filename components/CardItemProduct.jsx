@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Dimensions, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-/* import { Products } from '../data/products';
-import { Categories } from '../data/data'; */
 
-const CardProduct = ({item}) => {
-    /* const selectedCategory = Categories.a(); */
+
+const CardProduct = ({item, handleDetail}) => {
+   
     
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={()=>handleDetail(item)} >
             <MaterialCommunityIcons name="piano" size={130} color="black" />
            <View style={styles.textContainer}>
            <Text style={styles.textProduct}>{item.name}</Text>
@@ -23,9 +22,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        /* width: Dimensions.get('window').width / 2, */
         width: '95%',
-        /* height: '130%', */
         maxWidth: '98%',
         minWidth: 300,
         padding: 10,

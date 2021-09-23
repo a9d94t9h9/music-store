@@ -25,4 +25,3 @@ export const Categories = [
         url: require('../assets/img/categories/Accsesorios/pexels-rombo-3671184.jpg')
     }
 ];
-/* '../../assets/img/categories/pexels-bryan-geraldo-586415.jpg' */

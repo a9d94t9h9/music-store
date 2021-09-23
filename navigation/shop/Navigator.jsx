@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../Screens/Home';
-import Product  from '../Screens/ProductsSelected';
-import { Color } from '../data/colors';
+// Screens
+import Home from '../../Screens/shop/Home';
+import Product  from '../../Screens/shop/ProductsSelected';
+import { Color } from '../../data/colors';
+import Details from '../../Screens/shop/Details';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +17,6 @@ const Navigator = ()=>{
         screenOptions={{
             headerStyle: {
                 backgroundColor: Color.primary,
-                /* height: '170%', */
             }
         }}
         > 
@@ -27,6 +28,7 @@ const Navigator = ()=>{
             title: route.params.name,
         })}
         />
+        <Stack.Screen name="Detail" component={Details} />
         </Stack.Navigator>
     </NavigationContainer>
     )

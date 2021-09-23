@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         height: '100%',
         width: '100%',
-        /* padding: 20, */
         overflow: 'hidden',
         flex: 1,
      },

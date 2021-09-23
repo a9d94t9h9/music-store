@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
-import CardItem from '../components/CardItem';
+import CardItem from '../../components/CardItem';
 import { useNavigation } from '@react-navigation/core';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { categorySelected } from '../store/actions/category.action';
-/* import { Categories } from '../data/data'; */
+import { categorySelected } from '../../store/actions/category.action';
 
 
 const Home = ()=>{
