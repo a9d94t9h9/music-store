@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+/* import { NavigationContainer } from '@react-navigation/native'; */
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Screens
 import Home from '../../Screens/shop/Home';
@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 
 const Navigator = ()=>{
     return(
-        <NavigationContainer>
+     
         <Stack.Navigator 
         initialRouteName="Home" 
         screenOptions={{
@@ -30,7 +30,7 @@ const Navigator = ()=>{
         />
         <Stack.Screen name="Detail" component={Details} />
         </Stack.Navigator>
-    </NavigationContainer>
+
     )
 }
 

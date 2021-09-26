@@ -12,7 +12,7 @@ export default function App() {
    <Provider store={store} >
       <View style={styles.container}>
       
-        <MainNavigator/>
+        <TabNavigator/>
       
       <StatusBar style="auto" />
     </View>

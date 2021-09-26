@@ -12,14 +12,7 @@ const Stack = createNativeStackNavigator();
 const CartNavigator = ()=>{
     return(
         <NavigationContainer>
-        <Stack.Navigator 
-        initialRouteName="Home" 
-        screenOptions={{
-            headerStyle: {
-                backgroundColor: Color.primary,
-            }
-        }}
-        > 
+        <Stack.Navigator> 
        <Stack.Screen
         name="Carrito"
         component={Cart}

@@ -13,10 +13,18 @@ const BottomTabs = createBottomTabNavigator();
 
 const TabNavigator = ()=>{
     return(
-        <BottomTabs.Navigator initialRouteName="Shop">
+        <NavigationContainer>
+             <BottomTabs.Navigator 
+        initialRouteName="Shop"
+       /*  screenOptions={{
+            tabBarStyle: { position: 'absolute' },
+          }} */
+        >
             <BottomTabs.Screen name="Shop" component={Navigator} />
             <BottomTabs.Screen  name="Carrito" component={CartNavigator} />
         </BottomTabs.Navigator> 
+        </NavigationContainer>
+       
 )};
 
 export default TabNavigator;
