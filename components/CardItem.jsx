@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Dimensions } from 'react-native';
 
 /* import KeyBoard from '../Screens/KeyBoard'; */
 
@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: 280,
+        width: Dimensions.get('window').width / 2,
+       /*  width: '90%', */
+        /* maxWidth: 400, */
         height: 150,
         shadowColor: 'black',
         shadowOffset: {width: 0, height: 2},

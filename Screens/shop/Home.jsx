@@ -37,7 +37,7 @@ const Home = ()=>{
 
 const styles = StyleSheet.create({
     mainContainer: {
-        width: '100%',
+        /* width: '100%', */
         height: '100%',
         alignItems: 'center',
         /* paddingVertical: 20, */

@@ -4,15 +4,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Screens
 import Home from '../../Screens/shop/Home';
 import Product  from '../../Screens/shop/ProductsSelected';
-import { Color } from '../../data/colors';
-import Details from '../../Screens/shop/Details';
 
+import Details from '../../Screens/shop/Details';
+// Data
+import { Color } from '../../data/colors';
 const Stack = createNativeStackNavigator();
 
 const Navigator = ()=>{
     return(
-     
-        <Stack.Navigator 
+
+            <Stack.Navigator 
         initialRouteName="Home" 
         screenOptions={{
             headerStyle: {
@@ -30,8 +31,12 @@ const Navigator = ()=>{
         />
         <Stack.Screen name="Detail" component={Details} />
         </Stack.Navigator>
+    
 
     )
-}
+};
+
+
+
 
 export default Navigator;
