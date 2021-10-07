@@ -1,12 +1,21 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, Image, Dimensions } from 'react-native';
-import { useSelector } from 'react-redux';
+import { Button } from 'react-native-elements';
+import { useSelector, useDispatch } from 'react-redux';
+import { AntDesign } from '@expo/vector-icons'; 
+import {  selectedProduct } from '../../store/actions/products.action';
+import  addItem  from '../../store/actions/cart-action';
 /* showsHorizontalScrollIndicator = {false} */
 const Details = ()=>{
     const productID = useSelector(state => state.products.selectedID);
     const products = useSelector(state => state.products.list);
     const product = products.find(item => item.id === productID);
     const img = useSelector(state => state.images.list);
+    const dispatch = useDispatch();
+
+    const handlePressAddCart = ()=>{
+        dispatch(addItem(product));
+    }
     return(
         <View style={styles.container} >
             <FlatList
@@ -27,6 +36,16 @@ const Details = ()=>{
 
             />
             <Text>{product.name}</Text>
+            <Button
+            icon={
+                <AntDesign 
+                name="shoppingcart" 
+                size={24} 
+                color="black"
+                 />
+            }
+            onPress={handlePressAddCart}
+            />
         </View>
     )
 };

@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         /* width: '100%', */
         height: '100%',
         alignItems: 'center',
-        /* paddingVertical: 20, */
+        paddingVertical: '20%',
         flexDirection: 'column',
         marginTop: 40,
         

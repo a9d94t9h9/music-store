@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        width: Dimensions.get('window').width / 2,
+        width: Dimensions.get('window').width / 1,
        /*  width: '90%', */
         /* maxWidth: 400, */
         height: 150,
