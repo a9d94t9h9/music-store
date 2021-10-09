@@ -4,7 +4,7 @@ import * as Location from 'expo-location';
 import { useNavigation } from '@react-navigation/native';
 import MapPreview from './MapPreview';
 
-import { COLORS } from '../constants';
+import { colors } from '../data';
 
 const LocationSelector = props => {
   const navigation = useNavigation();
@@ -73,12 +73,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: COLORS.BLUSH,
+    borderColor: colors.secondary,
     borderWidth: 1,
   },
   image: {
     width: '100%',
     height: '100%',
+    position: 'absolute'
   }
 });
 
