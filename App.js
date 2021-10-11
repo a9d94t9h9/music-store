@@ -7,6 +7,14 @@ import store from './store/store';
 import  MainNavigator  from './navigation/MainNavigator';
 import Navigator from './navigation/shop/Navigator';
 
+import { init } from './db';
+
+init()
+.then(()=> console.log('DataBase Initialized'))
+.catch(err => {
+  console.log('Database failed to connect');
+  console.log(err.message);
+})
 
 // <Navigator />
 export default function App() {
